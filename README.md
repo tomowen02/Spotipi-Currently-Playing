@@ -7,6 +7,8 @@ There are basic playback controls that are shown when the album cover is pressed
 I wrote this project so that I could have the music that I am listening to displayed on a raspberry pi display.
 This will work on any device that can run python 3 - not just a raspberry pi.
 
+This project uses python's Flask web framework and queries the Spotipi API.
+
 #### Screenshots
 [![HXx9YIR.md.png](https://iili.io/HXx9YIR.md.png)](https://freeimage.host/i/HXx9YIR)
 
