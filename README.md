@@ -1,4 +1,4 @@
-# SpotipiCurrentlyPlaying
+# Spotipi Currently Playing
 
 ## Introduction
 This web application displays the album art for your currently played song on spotify.
