@@ -34,7 +34,6 @@ def index():
 @app.route('/track-info', methods=["GET"])
 def track_info():
     for i in range(1): # Could increase to 10?
-        sleep(1)
         spotify = spotipy_auth.get_spotify(session)
         track = spotify.current_user_playing_track()
         if track is not None:
@@ -91,4 +90,4 @@ def sign_out():
 
 if __name__ == '__main__':
     app.run(threaded=True, port=int(os.environ.get("PORT", 
-                                                   os.environ.get("SPOTIPY_REDIRECT_URI", 8080).split(":")[-1])))
+                                                   os.environ.get("SPOTIPY_REDIRECT_URI", 5000).split(":")[-1])))
