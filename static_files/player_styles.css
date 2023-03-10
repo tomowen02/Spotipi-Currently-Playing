@@ -13,7 +13,7 @@ html, body {
     background-size: cover;
     height: 100%;
     filter: blur(8px);
-    transform: scale(1.1); 
+    transform: scale(1.3); 
     
 }
 
@@ -65,14 +65,17 @@ img {
 
 
 .media-buttons > a {
-    font-size: 40px;
-    color: #000000;
-    height: 100px;
-    width: 100px;
+    width: 20%;
+    aspect-ratio: 1;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.media_text {
+    font-size: 2.75vw;
+    color: #f49e4c;
 }
