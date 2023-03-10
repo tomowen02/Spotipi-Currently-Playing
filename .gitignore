@@ -1,0 +1,6 @@
+envstuff.txt
+.flask_session/
+.vscode/
+load_dotenv.py
+todo.txt
+__pycache__/
