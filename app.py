@@ -5,6 +5,12 @@ from load_dotenv import load_dotenv
 import spotipy
 import spotipy_auth
 import os
+import pi_display_standby
+
+### Experimental pi display mode ###
+# If true, the screen will standby quicker if no track is being played. If a track is being
+# played, the scrren will not standby
+experimental_pi_display_mode = False
 
 app = Flask(__name__, static_folder='static_files')
 app.config['SECRET_KEY'] = os.urandom(64)
@@ -37,6 +43,8 @@ def track_info():
         spotify = spotipy_auth.get_spotify(session)
         track = spotify.current_user_playing_track()
         if track is not None:
+            if experimental_pi_display_mode:
+                pi_display_standby.normal() # Do not let the display standby
             current_song = track['item']['name']
             print(current_song)
             current_song_data = { 
@@ -47,6 +55,8 @@ def track_info():
                             'duration_ms': track['item']['duration_ms'],
                             'progress_ms': track['progress_ms'],
             }
+            if experimental_pi_display_mode:
+                pi_display_standby.no_track() # Set short standby time for the display
             return jsonify(current_song_data), 200
     return {}, 204
 
