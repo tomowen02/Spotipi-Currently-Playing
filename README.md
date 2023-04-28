@@ -37,7 +37,7 @@ def load_dotenv():
     os.environ['SPOTIPY_REDIRECT_URI'] = 'http://localhost:5000'  # This MUST be added to the spotify dev dashboard in the project settings
 ```
 
-#### New features
+## New features
 There is now a new variable called "experimental_pi_display_mode". When this is set to true, the server's HDMI display will be disabled if there are no tracking
 currently playing (and enabled when a track is playing). This has been implemented so that a Raspberry Pi can always be connected to a monitor and only display
 information when it needs to.
