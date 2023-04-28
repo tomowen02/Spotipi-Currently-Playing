@@ -55,9 +55,9 @@ def track_info():
                             'duration_ms': track['item']['duration_ms'],
                             'progress_ms': track['progress_ms'],
             }
-            if experimental_pi_display_mode:
-                pi_display_standby.no_track() # Set short standby time for the display
             return jsonify(current_song_data), 200
+    if experimental_pi_display_mode:
+        pi_display_standby.no_track() # Set short standby time for the display
     return {}, 204
 
 @app.route('/play_pause')
