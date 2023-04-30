@@ -10,14 +10,17 @@
 </head>
 <body>
     <div class="background" id="background" style="background-image: url({{ album_cover }})"></div>
-    <div class="container">
-        <img src="" id="album-cover" alt="Album Cover">
-        <span class="media-buttons" id="media-buttons">
-          <a href="/previous"><div class="media_text"><i class="fa fa-step-backward"></i></div></a>
-          <a href="/play_pause"><div class="media_text"><i class="fa fa-play"></i><i class="fa fa-pause"></i></div></a>
-          <a href="/skip"><div class="media_text"><i class="fa fa-step-forward"></i></div></a>
-        </span>
-        <div class="progress-bar" id="progress-bar"></div>
+    <div class="foreground">
+        <h1>Currently playing:</h1>
+        <div class="container">
+            <img src="" id="album-cover" alt="Album Cover">
+            <span class="media-buttons" id="media-buttons">
+                <a href="/previous"><div class="media_text"><i class="fa fa-step-backward"></i></div></a>
+                <a href="/play_pause"><div class="media_text"><i class="fa fa-play"></i><i class="fa fa-pause"></i></div></a>
+                <a href="/skip"><div class="media_text"><i class="fa fa-step-forward"></i></div></a>
+            </span>
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
     </div>
     <script src="/static_files/player.js"></script>
 </body>
