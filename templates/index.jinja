@@ -11,7 +11,10 @@
 <body>
     <div class="background" id="background" style="background-image: url({{ album_cover }})"></div>
     <div class="foreground">
-        <h1>Currently playing:</h1>
+        <div id="info">
+            <h1 id="artist-name">Artist name</h1>
+            <h2 id="track-title">Track title</h2>
+        </div>
         <div class="container">
             <img src="" id="album-cover" alt="Album Cover">
             <span class="media-buttons" id="media-buttons">

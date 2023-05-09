@@ -52,6 +52,8 @@ function updateContent(trackInfo) {
     document.title = trackInfo.track_title + ' • ' + trackInfo.artist;
     document.getElementById('album-cover').src = trackInfo.album_cover;
     background = document.getElementById('background').style.backgroundImage = "url('" + trackInfo.album_cover + "')";
+    document.getElementById('artist-name').innerHTML = trackInfo.artist;
+    document.getElementById('track-title').innerHTML = trackInfo.track_title;
     progress = document.getElementById('progress-bar');
     const progress_ratio = parseFloat(trackInfo.progress_ms / trackInfo.duration_ms);
     progress.style.transform = "scaleX(" + progress_ratio + ")";
