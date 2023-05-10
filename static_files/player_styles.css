@@ -1,3 +1,7 @@
+:root {
+    --content-width: 85vw;
+}
+
 /* Set the height of the page to the full viewport height */
 html, body {
     height: 100%;
@@ -22,8 +26,7 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80vh;
-    max-width: 90%;
+    width: var(--content-width);
 }
 
 #info {
@@ -79,8 +82,6 @@ img {
 .media-buttons.show {
     opacity: 1;
 }
-
-
 .media-buttons > a {
     width: 20%;
     aspect-ratio: 1;
@@ -91,8 +92,19 @@ img {
     align-items: center;
     cursor: pointer;
 }
-
 .media_text {
     font-size: 2.75vw;
     color: #f49e4c;
+}
+
+@media screen and (orientation: landscape) {
+    :root {
+        --content-width: 85vh;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    :root {
+        --content-width: 85vw;
+    }
 }
