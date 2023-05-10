@@ -6,4 +6,4 @@ def normal():
 
 def no_track():
     #os.system("DISPLAY=:0 xrandr --output HDMI-1 --off") # Uncomment this if using HDMI
-    #os.system("sudo echo 0 | sudo tee /sys/class/backlight/10-0045/bl_power") # Uncomment if using rpi official display
+    #os.system("sudo echo 1 | sudo tee /sys/class/backlight/10-0045/bl_power") # Uncomment if using rpi official display
