@@ -1,7 +1,9 @@
+// Initialise
 var albumCover = document.getElementById('album-cover');
 var mediaButtons = document.getElementById('media-buttons');
 mediaButtons.style.display = 'none';
 
+// Add listener for media buttons
 albumCover.addEventListener('click', function() {
     mediaButtons.style.display = 'flex';
     setTimeout(function() {
@@ -14,9 +16,7 @@ albumCover.addEventListener('click', function() {
     }, 3000);
 });
 
-function stopFunction(){
-    clearInterval(myVar); // stop the timer
-}
+// Update track information continuously
 async function continuousCheck(){
     let waitTime = 3000;
     while (true) {
